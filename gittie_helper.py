@@ -1,6 +1,7 @@
 import random
 import datetime
 
+
 class GittieHelper():
 
     def __init__(self):
@@ -56,13 +57,11 @@ e
 
         self.day_number = day_number
 
-    def glupia_nazwa(self):
+    def is_it_safe(self):
         """
         Method should calculate if exiting home is safe for gittie
         :param day_number:
         """
-
-
 
         all_values_dict = self.__dict__
 
