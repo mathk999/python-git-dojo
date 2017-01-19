@@ -18,24 +18,34 @@ class GittieHelper():
         Method sets temperature to attribute and validate input
         :param temperature_degree:
         """
+
+
         if temperature_degree not in range(-100, 101):
             raise ValueError("Temperature has to be between -100 an 100 degrees celcius")
-
-        self.temperature_degree = temperature_degree
+e
 
     def set_humidity(self, humidity_value):
         """
         Method sets humidity level to attribute and validate input
         :param humidity_value:
         """
+        if isinstance(humidity_value, float) and humidity_value > 0 and humidity_value < 1:
+            self.humidity = humidity_value
+        else:
+            raise ValueError("huminidity vaule should be a float in range 0.0 - 1.0")
+
+
 
     def set_air_pollution(self, air_pollution_level):
         """
         Method sets air pollution level to attribute and validate input
         :param air_pollution_level:
         """
-        if self.air_pollution_level not in range(1, 10):
-            raise ValueError('Air polution level has to be integer from 1 to 10')
+        if str(air_pollution_level).isdigit() and air_pollution_level in range(0, 1001):
+            self.air_pollition = air_pollution_level
+        else:
+            raise ValueError("air pollution should be a integer in range 0 - 1000")
+
 
     def set_day_of_the_year(self, day_number):
         """
@@ -52,6 +62,9 @@ class GittieHelper():
         Method should calculate if exiting home is safe for gittie
         :param day_number:
         """
+
+
+
         all_values_dict = self.__dict__
 
         safe_to_leave = True
