@@ -63,8 +63,6 @@ e
         :param day_number:
         """
 
-
-
         all_values_dict = self.__dict__
 
         safe_to_leave = True
