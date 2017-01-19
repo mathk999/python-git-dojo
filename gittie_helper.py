@@ -56,7 +56,7 @@ e
 
         self.day_number = day_number
 
-    def get_value(self):
+    def glupia_nazwa(self):
         """
         Method should calculate if exiting home is safe for gittie
         :param day_number:
